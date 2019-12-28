@@ -6,19 +6,9 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2019 18:33:30 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
-      <pubDate>Sat, 28 Dec 2019 18:33:30 +0800</pubDate>
-      
-      <guid>http://example.org/posts/my-first-post/</guid>
-      <description>害！</description>
-    </item>
     
   </channel>
 </rss>
