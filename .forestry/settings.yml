@@ -5,7 +5,7 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: post
+  path: content/post
   label: 文章
   create: all
   match: "**/*"
@@ -14,11 +14,6 @@ sections:
   label: Pages
   create: all
   match: "*"
-- type: directory
-  path: content/posts
-  label: Posts
-  create: all
-  match: "**/*"
 upload_dir: upload_path_f_to_cloudinary
 public_path: assets
 front_matter_path: ''
