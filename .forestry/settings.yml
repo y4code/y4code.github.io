@@ -17,7 +17,7 @@ sections:
 upload_dir: upload_path_forestry_to_netlify
 public_path: assets
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_env:
