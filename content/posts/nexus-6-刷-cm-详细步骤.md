@@ -1,6 +1,5 @@
 +++
 date = 2016-11-13T13:50:00Z
-draft = true
 title = "Nexus 6 刷 CM 详细步骤"
 
 +++
