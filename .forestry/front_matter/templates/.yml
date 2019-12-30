@@ -1,10 +1,10 @@
 ---
-label: 标题时间
+label: 模模版
 hide_body: false
 fields:
-- type: text
-  name: title
-  label: title
 - type: datetime
   name: date
   label: date
+- type: text
+  name: title
+  label: title
