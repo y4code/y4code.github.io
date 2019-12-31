@@ -8,3 +8,5 @@ fields:
 - type: text
   name: title
   label: title
+pages:
+- content/post/7-practical-tips-for-cheating-at-design-简陋翻译.md
