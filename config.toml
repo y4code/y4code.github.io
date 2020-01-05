@@ -11,11 +11,11 @@ unsafe= true
   weight = 10
   identifier = "home"
   url = "/"
-[[menu.main]]
-  name = "Archives"
-  weight = 20
-  identifier = "archives"
-  url = "/post/"
+# [[menu.main]]
+#   name = "Archives"
+#   weight = 20
+#   identifier = "archives"
+#   url = "/post/"
 [[menu.main]]
   name = "AboutMe"
   weight = 30
