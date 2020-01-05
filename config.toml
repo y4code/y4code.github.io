@@ -6,18 +6,18 @@ theme = "contrast"
 [markup.goldmark.renderer]
 unsafe= true
 
-[[menu.main]]             # config your menu              # 配置目录
-  name = "Home"
-  weight = 10
-  identifier = "home"
-  url = "/"
+# [[menu.main]]             # config your menu              # 配置目录
+#   name = "Home"
+#   weight = 10
+#   identifier = "home"
+#   url = "/"
 # [[menu.main]]
 #   name = "Archives"
 #   weight = 20
 #   identifier = "archives"
 #   url = "/post/"
 [[menu.main]]
-  name = "AboutMe"
+  name = "关于我"
   weight = 30
   identifier = "aboutme"
   url = "/aboutme/"
