@@ -1,10 +1,10 @@
 +++
 date = 2019-12-29T16:00:00Z
+image = "images/featured-post/post-1.jpg"
 title = "7 Practical Tips for Cheating at Design 简陋翻译"
-image =  "images/featured-post/post-1.jpg"
 type = "featured"
-+++
 
++++
 原文链接
 
 [https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886 "https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886")
@@ -14,15 +14,13 @@ type = "featured"
 * 主内容使用暗色（而不是黑色）（一篇文章的标题一样）
 * 二级内容使用灰色（已发布文章的日期）
 * 附加内容使用更轻（lighter）的灰色（maybe footer 的版权声明）
-
 * 大多数文本 使用 400/500 weight
 * 加重强调的文本 使用 600/700
-
 * 不要使用400 以下 weight
 
 **不要在有颜色的背景中使用灰色字**
 
-* 让文本颜色接近于背景色，而不是 浅灰 就完事了
+* 让文本颜色接近于背景色，而不是 浅灰 就完事了 
 * 两条在colorful 背景中减少对比度的方法
   1. 减少白色字体的透明度
   2. based on 背景色选取一个颜色，色彩不变，调节它的饱和度明度（maybe 明度增加）
@@ -52,6 +50,5 @@ type = "featured"
 
 * 主要的action应该是明显的 固定的？ 高差异的背景色在这里很好用
 * 二级action应该是清晰的但不是重要的，轮廓样式或者 低差异化的背景色是个很好的选择
-* 三级action 应该是可以发现的，但不能是招摇的，使用Link样式对 这些action works fine 
-
+* 三级action 应该是可以发现的，但不能是招摇的，使用Link样式对 这些action works fine
 * 如果破坏性button不是主action，那应该是二级action的待遇
