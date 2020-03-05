@@ -1,7 +1,7 @@
 +++
 date = 2016-11-13T13:50:00Z
 title = "Hexo 一键发布 shell 命令"
-
+image =  "images/featured-post/post-6.jpg"
 +++
   
 写完博客后，通常我都是找到 \`hexo clean hexo generate\` 然后再把 CNAME 拷贝到生成的 public 文件夹中，然后再 \`hexo deploy\`  
