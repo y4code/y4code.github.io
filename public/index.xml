@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>属实 five 「部落格」</title>
+    <link>https://y4code.com/</link>
+    <description>Recent content on 属实 five 「部落格」</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 04 Jan 2020 16:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://y4code.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>参加技术会议说服老板的模版</title>
+      <link>https://y4code.com/post/%E5%8F%82%E5%8A%A0%E6%8A%80%E6%9C%AF%E4%BC%9A%E8%AE%AE%E8%AF%B4%E6%9C%8D%E8%80%81%E6%9D%BF%E7%9A%84%E6%A8%A1%E7%89%88/</link>
+      <pubDate>Sat, 04 Jan 2020 16:00:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/%E5%8F%82%E5%8A%A0%E6%8A%80%E6%9C%AF%E4%BC%9A%E8%AE%AE%E8%AF%B4%E6%9C%8D%E8%80%81%E6%9D%BF%E7%9A%84%E6%A8%A1%E7%89%88/</guid>
+      <description>想要参加技术会议，但是需要说服老板？这里有一份模版来自
+https://jamstackconf.com/sf/convince-your-boss/
+Convince Your Boss Eager to attend but need to convince the higher-ups? We&#39;ve prepared a template describing many of the reasons why you and your company will benefit from attending the conference.
+You can also email us with inquiries on group discounts or any other questions!
+Dear (amazing boss), I&#39;d like your permission to attend JAMStack_conf (jamstackconf.com) on October 16 to 18, 2019 at City View at Metreon, SF.</description>
+    </item>
+    
+    <item>
+      <title>7 Practical Tips for Cheating at Design 简陋翻译</title>
+      <link>https://y4code.com/post/7-practical-tips-for-cheating-at-design-%E7%AE%80%E9%99%8B%E7%BF%BB%E8%AF%91/</link>
+      <pubDate>Sun, 29 Dec 2019 16:00:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/7-practical-tips-for-cheating-at-design-%E7%AE%80%E9%99%8B%E7%BF%BB%E8%AF%91/</guid>
+      <description>原文链接
+https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886
+使用颜色和 Weight 来创造等级而不是大小
+  主内容使用暗色（而不是黑色）（一篇文章的标题一样）
+  二级内容使用灰色（已发布文章的日期）
+  附加内容使用更轻（lighter）的灰色（maybe footer 的版权声明）
+  大多数文本 使用 400/500 weight
+  加重强调的文本 使用 600/700
+  不要使用400 以下 weight
+  不要在有颜色的背景中使用灰色字
+ 让文本颜色接近于背景色，而不是 浅灰 就完事了 两条在colorful 背景中减少对比度的方法  减少白色字体的透明度 based on 背景色选取一个颜色，色彩不变，调节它的饱和度明度（maybe 明度增加）    抵消阴影
+ 单 使用向下的阴影 和 阴影扩散而不是 各个角度阴影，因为这像我们现实中看事物的方式  更少得使用 border
+ 过多的 border 使内容杂乱，下次你想用的时候可以尝试  使用 box shadow来作为 border 区分内容 使用两种不同的（细微变化的）背景色 在毗连元素上 增加额外的空白    不要放大你的原本意在小的 icon</description>
+    </item>
+    
+    <item>
+      <title>替换 Git 历史记录中的指定 username 或者 email</title>
+      <link>https://y4code.com/post/%E6%9B%BF%E6%8D%A2-git-%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E7%9A%84%E6%8C%87%E5%AE%9A-username-%E6%88%96%E8%80%85-email/</link>
+      <pubDate>Fri, 20 Dec 2019 16:00:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/%E6%9B%BF%E6%8D%A2-git-%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E7%9A%84%E6%8C%87%E5%AE%9A-username-%E6%88%96%E8%80%85-email/</guid>
+      <description>git filter-branch -f --commit-filter &#39; if [ &amp;quot;$GIT_AUTHOR_NAME&amp;quot; != &amp;quot;给你康的名字&amp;quot; ]; then GIT_AUTHOR_NAME=&amp;quot;给你康的名字&amp;quot;; GIT_AUTHOR_EMAIL=&amp;quot;给你康的邮箱&amp;quot;; git commit-tree &amp;quot;$@&amp;quot;; else git commit-tree &amp;quot;$@&amp;quot;; fi&#39; HEAD  其中第二行还可以改成
+if [ &amp;quot;$GIT_AUTHOR_NAME&amp;quot; = &amp;quot;不想给你康的名字&amp;quot; ];  完事后强制推送
+git push --force --tags origin &#39;refs/heads/*&#39; </description>
+    </item>
+    
+    <item>
+      <title>在 Docker 中运行 Nginx，同时 SSL/HTTPS 认证</title>
+      <link>https://y4code.com/post/%E5%9C%A8-docker-%E4%B8%AD%E8%BF%90%E8%A1%8C-nginx-%E5%90%8C%E6%97%B6-ssl-https-%E8%AE%A4%E8%AF%81/</link>
+      <pubDate>Mon, 16 Dec 2019 16:00:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/%E5%9C%A8-docker-%E4%B8%AD%E8%BF%90%E8%A1%8C-nginx-%E5%90%8C%E6%97%B6-ssl-https-%E8%AE%A4%E8%AF%81/</guid>
+      <description>Docker 单服务部署 我用的是 nginxconfig.io 的 服务，似乎现在被 DigitalOcean 给蓝金黄了，点击链接会跳转到 DigitalOcean 的网站，Anyway，服务是很好用的，你要做是简单填写几项，网站会自动生成完整可用的 Nginx 配置
+⚠️ 需要注意的是  生成的配置需要和原有的配置合并才可用，即覆盖配置
+在参照 nginxconfig.io 的步骤都结束，并且你的网站可以通过https 正常访问时，然后
+测试网络
+docker run --rm --name mynginx -p 80:80 -d nginx
+测试没有问题后
+docker run --rm --name mynginx -v /etc/nginx:/etc/nginx -v /etc/letsencrypt:/etc/letsencrypt -v /var/www/_letsencrypt:/var/www/_letsencrypt -v /var/www/STATIC_FOlDER:/var/www/YOUR_DOMAIN -p 80:80 -p 443:443 -d nginx
+就 OK 了 但是涉及到 Docker 容器之间的通信就比较费劲，参考了一圈之后，我决定使用 Docker 自带的 Docker Network 来通信
+使用 GitLab CI/CD Docker Swarm 部署 我打算在虚拟机上部署三个服务
+1. 静态资源 2.</description>
+    </item>
+    
+    <item>
+      <title>诗 《回答》</title>
+      <link>https://y4code.com/post/%E8%AF%97-%E5%9B%9E%E7%AD%94/</link>
+      <pubDate>Wed, 04 Jan 2017 16:00:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/%E8%AF%97-%E5%9B%9E%E7%AD%94/</guid>
+      <description>回答
+北岛
+卑鄙是卑鄙者的通行证，
+高尚是高尚者的墓志铭。
+看吧，在那镀金的天空中，
+飘满了死者弯曲的倒影。
+冰川纪过去了，
+为什么到处都是冰凌？
+好望角发现了，
+为什么死海里千帆相竞？
+我来到这个世界上，
+只带着纸、绳索和身影，
+为了在审判之前，
+宣读那些被判决了的声音：
+告诉你吧，世界，
+我——不——相——信！
+纵使你脚下有一千名挑战者，
+那就把我算做第一千零一名。
+我不相信天是蓝的，
+我不相信雷的回声；
+我不相信梦是假的，
+我不相信死无报应。
+如果海洋注定要决堤，
+就让所有的苦水都注入我心中；
+如果陆地注定要上升，
+就让人类重新选择生存的峰顶。
+新的转机和闪闪的星斗，
+正在缀满没有遮拦的天空，
+那是五千年的象形文字，
+那是未来人们凝视的眼睛</description>
+    </item>
+    
+    <item>
+      <title>Hexo 一键发布 shell 命令</title>
+      <link>https://y4code.com/post/hexo-%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83-shell-%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 13 Nov 2016 13:50:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/hexo-%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83-shell-%E5%91%BD%E4%BB%A4/</guid>
+      <description>写完博客后，通常我都是找到 `hexo clean hexo generate` 然后再把 CNAME 拷贝到生成的 public 文件夹中，然后再 `hexo deploy`
+很烦
+然后在听内核恐慌 ＃3 ”静态网站生成器“ 的时候，Rio 说到在写博客的时候碰命令行是一件有摩擦力的事情，我就突然明白了
+下面是我的 hexo 一键 shell 命令
+``` $ #!/bin/bash
+$ hexo clean $ hexo generate $ cp CNAME public $ hexo deploy
+$ echo &amp;ldquo;hexo 一键发布命令 , Inspired by Rio &amp;amp; Tao Wu on the Kernal Panic No 3&amp;rdquo; $ echo &amp;ldquo;写作的时候不想碰命令行 , 命令行会给写作带来 &amp;ldquo;摩擦力&amp;rdquo; &amp;quot; $ echo &amp;ldquo;不要忘记打开 GitHub for Desktop push 哟&amp;rdquo; $ echo &amp;ldquo;记得要经常写博客哟～&amp;rdquo;```</description>
+    </item>
+    
+    <item>
+      <title>Nexus 6 刷 CM 详细步骤</title>
+      <link>https://y4code.com/post/nexus-6-%E5%88%B7-cm-%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/</link>
+      <pubDate>Sun, 13 Nov 2016 13:50:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/nexus-6-%E5%88%B7-cm-%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/</guid>
+      <description>十月份 Android 7.0 在 Nexus 6 上正式推送后，我的 N6 只要联网就一直会在后台下载东西，特别是在感人的联通数据连接外网的速度下，基本上 SS 服务器的最大速度是多少就能跑到多少，吃了我三四 G 的流量，多交了几十块钱的话费，各种关闭后台数据限制全都没用，于是决定刷机，早就听闻 CM 的大名，决定试一下
+官方的 CM WiKi 有遗漏和错误的地方，让我走了不少弯路，弯路我就不贴出来了，直接上正确步骤
+## 步骤
+#### 准备
+* 下载系统文件压缩包和 Recovery 镜像
+直接在官网下载：[https://download.cyanogenmod.org/?device=shamu](https://download.cyanogenmod.org/?device=shamu)
+ 开发版 nightly or 稳定版 snapshot * CyanogenMod Build 为 系统文件压缩包，CyanogenMod Recovery 为镜像文件
+* 我是 Recovery 和 CM 系统都刷，如果只是想刷系统不刷 CM 系统的话可以只下载压缩包不下载 Re 文件
+### 1. 解锁 Bootloader
+官方说解锁 Bootloader 会清除数据，可我解锁 Bootloader 之后在没刷系统之前又用了一下午手机也没事
+#### 确保你的电脑可以使用 Fastboot 和 ADB
+两个命令行工具，因为我安装过 Android Studio ，所以直接在 bash 的环境变量里设定一下路径，让它指向 ADB 和 Fastboot 的目录即可 * adb环境变量设置：</description>
+    </item>
+    
+    <item>
+      <title>第一篇Hexo文章</title>
+      <link>https://y4code.com/post/my-first-post/</link>
+      <pubDate>Thu, 13 Oct 2016 16:00:00 +0000</pubDate>
+      
+      <guid>https://y4code.com/post/my-first-post/</guid>
+      <description>已从WordPress迁移到Hexo博客，特此留念</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://y4code.com/aboutme/</link>
+      <pubDate>Thu, 21 Apr 2016 04:48:33 +0000</pubDate>
+      
+      <guid>https://y4code.com/aboutme/</guid>
+      <description>看你 🐎 呢？
+ 我喜欢搞一些自己看着喜欢的东西讨厌所有体制化和说死了的东西:
+认真，有趣，反对一切真理、湿货、忠告、定论</description>
+    </item>
+    
+  </channel>
+</rss>

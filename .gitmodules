@@ -7,3 +7,6 @@
 [submodule "themes/contrast"]
 	path = themes/contrast
 	url = https://github.com/y4code/contrast-hugo
+[submodule "themes/liva-hugo"]
+	path = themes/liva-hugo
+	url = https://github.com/y4code/liva-hugo.git
