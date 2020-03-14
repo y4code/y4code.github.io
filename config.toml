@@ -53,10 +53,10 @@ disqusShortname = ""
   URL = "aboutme"
   weight = 1
   
-  # [[menu.main]]
-  # name = "Post"
-  # URL = "blog"
-  # weight = 2
+  [[menu.main]]
+  name = "Tools"
+  URL = "tools"
+  weight = 2
   
   # [[menu.main]]
   # name = "Contact"
