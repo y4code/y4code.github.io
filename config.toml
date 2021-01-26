@@ -1,7 +1,7 @@
 baseURL = "https://y4code.com/"
 languageCode = "zh-cn"
 title = "属实 five 「部落格」"
-theme = "liva-hugo"
+theme = "yinyang"
 
 # markdown 中带有HTML
 [markup.goldmark.renderer]
@@ -82,6 +82,18 @@ disqusShortname = ""
 
 #################### default parameters ################################
 [params]
+# for theme yinyang
+headTitle = "Y4CODE"
+# mainSections = ["posts"]
+[[params.socials]]
+name = "About Me"
+link = "/aboutme/"
+[[params.socials]]
+name = "Github"
+link = "https://github.com/y4code"
+
+
+
 logo = "images/logo.png"
 home = "Home"
 # Meta data

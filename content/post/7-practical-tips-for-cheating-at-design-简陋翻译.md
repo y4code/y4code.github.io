@@ -2,7 +2,6 @@
 date = 2019-12-29T16:00:00Z
 image = "images/featured-post/post-1.jpg"
 title = "7 Practical Tips for Cheating at Design 简陋翻译"
-type = "featured"
 
 +++
 原文链接
