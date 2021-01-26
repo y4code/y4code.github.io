@@ -12,10 +12,10 @@
 	url = https://github.com/y4code/liva-hugo.git
 [submodule "themes/yinyang"]
 	path = themes/yinyang
-	url = git@github.com:joway/hugo-theme-yinyang.git
+	url = https://github.com/joway/hugo-theme-yinyang.git
 [submodule "themes/book"]
 	path = themes/book
 	url = https://github.com/alex-shpak/hugo-book
 [submodule "themes/octopress"]
 	path = themes/octopress
-	url = git@github.com:parsiya/Hugo-Octopress.git
+	url = https://github.com/parsiya/Hugo-Octopress.git
