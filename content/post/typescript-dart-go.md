@@ -35,18 +35,16 @@ func main() {
 
 ```typescript
 class Vertex {
-	public x: number
-	public y: number
-	constructor(x: number, y: number) {
-		this.x = x;
-		this.y = y;
-	}
-	Abs(): number {
-		return Math.sqrt(this.x * this.x + this.y * this.y);
-	}
+    public x: number
+    public y: number
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+    Abs(): number {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
 }
-
-type x = Number;
 
 const v = new Vertex(3, 4);
 console.log(v.Abs());
@@ -57,18 +55,17 @@ console.log(v.Abs());
 ```dart
 import 'dart:math';
 
-class Vertext {
+class Vertex {
   final double x;
   final double y;
-  Vertext(this.x, this.y);
+  Vertex(this.x, this.y);
   double Abs() {
-	return sqrt(this.x * this.x + this.y * this.y);
+    return sqrt(this.x * this.x + this.y * this.y);
   }
 }
 
 main() {
-  var v = Vertext(3, 4);
+  var v = Vertex(3, 4);
   print(v.Abs());
 }
 ```
-
