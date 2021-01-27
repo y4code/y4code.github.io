@@ -10,4 +10,5 @@ fields:
   label: title
 pages:
 - content/post/effective-go.md
+- content/post/typescript-dart-go.md
 - content/post/参加技术会议说服老板的模版.md
