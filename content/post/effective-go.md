@@ -7,7 +7,7 @@ title = "读 Effective Go 笔记"
 
 # 正则查找go doc
 
-```swift
+```go
 
 go doc -all regexp | grep -i parse
 
@@ -29,7 +29,7 @@ go doc -all regexp | grep -i parse
 
 若你想遍历数组、切片、字符串或者映射，或从信道中读取消息， range 子句能够帮你轻松实现循环。
 
-```swift
+```go
 
 for key, value := range oldMap {
 
@@ -41,7 +41,7 @@ newMap\[key\] = value
 
 # Switch 做判断
 
-```swift
+```go
 
 func unhex(c byte) byte {
 
@@ -69,7 +69,7 @@ return 0
 
 `switch` 并不会自动下溯，但 `case` 可通过逗号分隔来列举相同的处理条件。
 
-```swift
+```go
 
 func shouldEscape(c byte) bool {
 
@@ -89,7 +89,7 @@ return false
 
 # Switch 做类型选择
 
-```swift
+```go
 
 var t interface{}
 
@@ -123,7 +123,7 @@ fmt.Printf("pointer to integer %d\\n", *t) // t 是 *int 类型
 
 # 命名结果参数
 
-```swift
+```go
 
 func ReadFull(r Reader, buf []byte) (n int, err error) {
 
