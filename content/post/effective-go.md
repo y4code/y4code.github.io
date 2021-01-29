@@ -91,3 +91,52 @@ func ReadFull(r Reader, buf []byte) (n int, err error) {
 	return
 }
 ```
+
+# 空接口
+
+`fmt.Print` 可接受类型为 `interface{}` 的任意数量的参数。
+
+# 使用 make 除非要获得明确指针再使用new()
+
+> `make` 只适用于映射、切片和信道且不返回指针。若要获得明确的指针， 请使用 `new` 分配内存。
+
+make
+
+```go
+return &File{fd, name, nil, 0}
+```
+
+```go
+return &File{fd: fd, name: name}
+```
+
+```go
+v := make([]int, 100)
+```
+
+new
+
+```go
+type SyncedBuffer struct {
+	lock	sync.Mutex
+	buffer  bytes.Buffer
+}
+
+// SyncedBuffer 类型的值也是在声明时就分配好内存就绪了。后续代码中， p 和 v 无需进一步处理即可正确工作。
+
+var v SyncedBuffer	  // type  SyncedBuffer
+p := new(SyncedBuffer)  // type *SyncedBuffer
+```
+
+# 把一维数组变成二维数组的Trick
+
+```go
+picture := make([][]uint8, YSize) //  每 y 个单元一行。
+// 分配一个大一些的切片以容纳所有的元素
+pixels := make([]uint8, XSize*YSize) // 指定类型[]uint8, 即便图片是 [][]uint8.
+//循环遍历图片所有行，从剩余像素切片的前面对每一行进行切片。
+for i := range picture {
+	picture[i], pixels = pixels[:XSize], pixels[XSize:]
+}
+```
+
