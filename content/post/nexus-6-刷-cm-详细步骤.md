@@ -18,7 +18,7 @@ title = "Nexus 6 刷 CM 详细步骤"
 
 我是 Recovery 和 CM 系统都刷，如果只是想刷系统不刷 CM 系统的话可以只下载压缩包不下载 Re 文件
 
-1. # 解锁 Bootloader
+# 解锁 Bootloader
 
 
 官方说解锁 Bootloader 会清除数据，可我解锁 Bootloader 之后在没刷系统之前又用了一下午手机也没事
@@ -67,7 +67,7 @@ title = "Nexus 6 刷 CM 详细步骤"
 
 官方文档说是解锁会清除手机里的全部数据，但我到此步为止，手机开机仍然可以正常使用，数据全都存在，完全清除手机里的数据是在第三大步时手动 Wipe 的
 
-2. # 使用 Fastboot 安装 Recovery ( 安装 CM Recovery 非 CM 系统)
+# 使用 Fastboot 安装 Recovery ( 安装 CM Recovery 非 CM 系统)
 
 
 > 通过下述命令或手动操作手机进入 Bootloader 模式
@@ -92,7 +92,7 @@ title = "Nexus 6 刷 CM 详细步骤"
 
 CM 官方提示：某些 ROM 可能会在手机重启后覆盖你写入的 Recovery ，立即启动 Recovery 可以避免这种情况
 
-3. # 在 Recovery 中安装 CM 系统
+# 在 Recovery 中安装 CM 系统
 
 
 > 下载好 CM 系统 zip 包及可选包
