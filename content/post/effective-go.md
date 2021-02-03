@@ -140,3 +140,57 @@ for i := range picture {
 }
 ```
 
+# 转换类型以使用其方法集合
+
+要实现排序功能，没有必要「实现排序方法」，只需要位于实现 `src/sort/sort.go` 名字为 `Interface` 的接口里的三个方法即可，这三个方法是:
+
+```go
+type Interface interface {
+	// Len is the number of elements in the collection.
+	Len() int
+	// Less reports whether the element with
+	// index i should sort before the element with index j.
+	Less(i, j int) bool
+	// Swap swaps the elements with indexes i and j.
+	Swap(i, j int)
+}
+```
+
+然后对一个类型为 `Sequence` 的变量 `s` 进行排序时即可
+
+```go
+sort.Sort(s)
+```
+
+或
+
+```go
+sort.IntSlice(s).Sort()
+```
+
+# 实现个某个接口即类型等于该接口类型
+
+```go
+type Stringer interface {
+	String() string
+}
+
+var value interface{} // Value 由调用者提供
+switch str := value.(type) {
+case string:
+	return str
+case Stringer:
+	return str.String()
+}
+```
+
+# 类型断言
+
+```go
+if str, ok := value.(string); ok {
+	return str
+} else if str, ok := value.(Stringer); ok {
+	return str.String()
+}
+```
+
