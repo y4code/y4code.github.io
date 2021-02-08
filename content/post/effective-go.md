@@ -3,17 +3,19 @@ date = 2021-01-26T16:00:00Z
 title = "读 Effective Go 笔记"
 
 +++
-# Go Code Snippet 「Effective Go 」
-
 # 正则查找go doc
+
 
 ```shell
 go doc -all regexp | grep -i parse
 ```
 
+
 # 重复声明 :=
 
+
 在满足下列条件时，已被声明的变量 v 可出现在:= 声明中：
+
 
 - 本次声明与已声明的 v 处于同一作用域中（若 v 已在外层作用域中声明过，则此次声明会创建一个新的变量 §），
 - 在初始化中与其类型相应的值才能赋予 v，且
@@ -23,6 +25,7 @@ go doc -all regexp | grep -i parse
 
 # 遍历数组、切片、字符串或者映射
 
+
 若你想遍历数组、切片、字符串或者映射，或从信道中读取消息， range 子句能够帮你轻松实现循环。
 
 ```go
@@ -31,7 +34,9 @@ for key, value := range oldMap {
 }
 ```
 
+
 # Switch 做判断
+
 
 ```go
 func unhex(c byte) byte {
@@ -47,6 +52,7 @@ func unhex(c byte) byte {
 }
 ```
 
+
 `switch` 并不会自动下溯，但 `case` 可通过逗号分隔来列举相同的处理条件。
 
 ```go
@@ -59,7 +65,9 @@ func shouldEscape(c byte) bool {
 }
 ```
 
+
 # Switch 做类型选择
+
 
 ```go
 var t interface{}
@@ -78,7 +86,9 @@ case *int:
 }
 ```
 
+
 # 命名结果参数
+
 
 ```go
 func ReadFull(r Reader, buf []byte) (n int, err error) {
@@ -92,7 +102,9 @@ func ReadFull(r Reader, buf []byte) (n int, err error) {
 }
 ```
 
+
 # 空接口
+
 
 `fmt.Print` 可接受类型为 `interface{}` 的任意数量的参数。
 
@@ -100,19 +112,23 @@ func ReadFull(r Reader, buf []byte) (n int, err error) {
 
 > `make` 只适用于映射、切片和信道且不返回指针。若要获得明确的指针， 请使用 `new` 分配内存。
 
+
 make
 
 ```go
 return &File{fd, name, nil, 0}
 ```
 
+
 ```go
 return &File{fd: fd, name: name}
 ```
 
+
 ```go
 v := make([]int, 100)
 ```
+
 
 new
 
@@ -128,7 +144,9 @@ var v SyncedBuffer	  // type  SyncedBuffer
 p := new(SyncedBuffer)  // type *SyncedBuffer
 ```
 
+
 # 把一维数组变成二维数组的Trick
+
 
 ```go
 picture := make([][]uint8, YSize) //  每 y 个单元一行。
@@ -140,7 +158,9 @@ for i := range picture {
 }
 ```
 
+
 # 转换类型以使用其方法集合
+
 
 要实现排序功能，没有必要「实现排序方法」，只需要位于实现 `src/sort/sort.go` 名字为 `Interface` 的接口里的三个方法即可，这三个方法是:
 
@@ -156,11 +176,13 @@ type Interface interface {
 }
 ```
 
+
 然后对一个类型为 `Sequence` 的变量 `s` 进行排序时即可
 
 ```go
 sort.Sort(s)
 ```
+
 
 或
 
@@ -168,7 +190,9 @@ sort.Sort(s)
 sort.IntSlice(s).Sort()
 ```
 
+
 # 实现个某个接口即类型等于该接口类型
+
 
 ```go
 type Stringer interface {
@@ -184,13 +208,116 @@ case Stringer:
 }
 ```
 
+
 # 类型断言
+
 
 ```go
 if str, ok := value.(string); ok {
 	return str
 } else if str, ok := value.(Stringer); ok {
 	return str.String()
+}
+```
+
+
+# Channel 作为接受者
+
+
+```go
+// 每次浏览该信道都会发送一个提醒。
+// （可能需要带缓冲的信道。）
+type Chan chan *http.Request
+
+func (ch Chan) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	ch <- req
+	fmt.Fprint(w, "notification sent")
+}
+```
+
+
+换一种思路，这是一种优雅的发送通知的方式
+
+#  函数作为接受者即函数实现了接口
+
+
+```go
+// HandlerFunc 类型是一个适配器，
+// 它允许将普通函数用做HTTP处理程序。
+// 若 f 是个具有适当签名的函数，
+// HandlerFunc(f) 就是个调用 f 的处理程序对象。
+type HandlerFunc func(ResponseWriter, *Request)
+
+// ServeHTTP calls f(w, req).
+func (f HandlerFunc) ServeHTTP(w ResponseWriter, req *Request) {
+	f(w, req)
+}
+```
+
+
+类似于 `Sequence` 转成 `IntSlice` 以访问 `IntSlice.Sort` 一样， 这里把 `ArgsServer` 类型转成 `HanderlerFunc`  以调用 `ServeHTTP` , tmd 绝了
+
+```go
+http.Handle("/args", http.HandlerFunc(ArgServer))
+```
+
+
+一切都是因为接口只是方法（Method）的集合，而几乎任何类型都能定义方法（Method），包括函数（Function）
+
+# 一种极其罕见的显示接口声明方法
+
+
+```go
+var _ json.Marshaler = (*json.RawMessage)(nil)
+```
+
+
+# 内嵌（Embedding）
+
+
+```go
+type Job struct {
+	Command string
+	*log.Logger
+}
+```
+
+
+现在 `*log.Logger` 上的方法可以直接通过 `Job` 访问到，即 `Job.Logger.Println 可以直接通过 Job.Println` 访问
+
+
+1. 此处没有字段名时，结构名即为字段名，`Job.Logger`
+2. 在上一条规则的前提下，内嵌时，不能存在同名字段名，且外部类型的访问字段可以覆盖内部类型的访问字段，你可以理解为面向对象编程中「重写 Override」
+
+
+> Correct
+
+
+```go
+type Job struct {
+	Command string
+	*log.Logger
+}
+```
+
+
+or
+
+```go
+type Job struct {
+	Command string
+	Logger string
+}
+```
+
+> Wrong
+
+
+```go
+type Job struct {
+	Command string
+	Logger string
+	*log.Logger
 }
 ```
 
