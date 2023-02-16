@@ -1,5 +1,5 @@
 +++
-date = 2019-12-16T16:00:00.000Z
+date = "2019-12-16T16:00:00.000Z"
 title = "在 Docker 中运行 Nginx，同时 SSL/HTTPS 认证"
 image =  "images/featured-post/post-5.jpg"
 +++

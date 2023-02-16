@@ -1,5 +1,5 @@
 +++
-date = 2019-12-20T16:00:00.000Z
+date = "2019-12-20T16:00:00.000Z"
 image = "images/featured-post/post-4.jpg"
 title = "替换 Git 历史记录中的指定 username 或者 email"
 
