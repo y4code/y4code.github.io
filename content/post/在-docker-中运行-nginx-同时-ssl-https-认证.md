@@ -1,7 +1,6 @@
 +++
 date = "2019-12-16T16:00:00.000Z"
 title = "在 Docker 中运行 Nginx，同时 SSL/HTTPS 认证"
-image =  "images/featured-post/post-5.jpg"
 +++
 ## Docker 单服务部署
 我用的是 [nginxconfig.io](nginxconfig.io) 的 服务，似乎现在被 DigitalOcean 给蓝金黄了，点击链接会跳转到 DigitalOcean 的网站，Anyway，服务是很好用的，你要做是简单填写几项，网站会自动生成完整可用的 Nginx 配置

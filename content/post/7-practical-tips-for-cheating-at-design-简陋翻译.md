@@ -1,6 +1,5 @@
 +++
 date = "2019-12-29T16:00:00.000Z"
-image = "images/featured-post/post-1.jpg"
 title = "7 Practical Tips for Cheating at Design 简陋翻译"
 
 +++
