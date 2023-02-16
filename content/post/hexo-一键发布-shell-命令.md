@@ -1,5 +1,5 @@
 +++
-date = 2016-11-13T13:50:00.000Z
+date = '2016-11-13T13:50:00.000Z'
 title = "Hexo 一键发布 shell 命令"
 image =  "images/featured-post/post-6.jpg"
 +++
