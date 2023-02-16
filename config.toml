@@ -90,7 +90,7 @@ name = "About Me"
 link = "/aboutme/"
 [[params.socials]]
 name = "Github"
-link = "https://github.com/y4code"
+link = "https://github.com/y4code/y4code.github.io/"
 
 
 
