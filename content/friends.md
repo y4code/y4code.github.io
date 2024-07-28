@@ -1,1 +1,1 @@
-[Siri 的博客](https://siri.ink/)
+[Sirius 的博客](https://siri.ink/)
