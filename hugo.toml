@@ -1,0 +1,21 @@
+baseURL = 'https://y4code.com/'
+languageCode = 'zh-cn'
+title = '粥粥的「部落格」'
+theme = 'yinyang'
+
+# for theme yinyang
+# https://github.com/joway/hugo-theme-yinyang
+[params]
+headTitle = "Y4CODE"
+
+[[params.socials]]
+name = "About Me"
+link = "/aboutme/"
+
+[[params.socials]]
+name = "Friends"
+link = "/friends/"
+
+[[params.socials]]
+name = "Github"
+link = "https://github.com/y4code/y4code.github.io/"
