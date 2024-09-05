@@ -2,8 +2,25 @@
 
 认真，有趣，反对一切真理、湿货、忠告、定论
 
+正在使用的效率软件
 
-![](https://res.cloudinary.com/y4code/image/upload/v1577542510/upload_path_f_to_cloudinary/kannima_ylwehy.jpg)
+- Logseq
+- Readwise 和 Readwise Reader
+- Raycast
+- Pastebot
 
+正在开始使用的效率软件
 
+- Notion
+- Cursor
+- Follow
+- Bob Translator
+- Open Translator with free ChatGLM
+
+逐渐不再使用的效率软件
+
+- 欧陆词典
+- DEVONthink
+- Obsidian
+- 滴答清单
 
